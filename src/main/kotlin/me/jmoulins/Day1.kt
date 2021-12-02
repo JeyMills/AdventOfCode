@@ -40,7 +40,8 @@ class Day1 {
         }
 
         private fun readFileUsingGetResource(): List<Int> {
-            return this::class.java.getResourceAsStream("/day1/input.txt")?.bufferedReader()?.readLines()?.map { it.toInt() } ?: emptyList()
+            return this::class.java.getResourceAsStream("/day1/input.txt")?.bufferedReader()?.readLines()
+                ?.map { it.toInt() } ?: emptyList()
         }
     }
 }
