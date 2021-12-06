@@ -1,6 +1,6 @@
 package me.jmoulins
 
-import java.util.AbstractMap
+import java.util.*
 
 /**
  * @see https://adventofcode.com/2021/day/4
@@ -18,8 +18,10 @@ class Day4 {
 
         // Part 1 - Giant squid - Winning grid
         private fun step1(drawNumbers: List<Int>, bingoGrids: List<BingoGrid>) {
+
             var winner: BingoGrid? = null
             var lastDrawNumber = 0
+
             forLoop@ for (draw in drawNumbers) {
                 run forEachLoop@{
                     bingoGrids.forEach {
@@ -36,18 +38,21 @@ class Day4 {
                 }
                 if (winner != null) break@forLoop
             }
+
             val sumOfAllUnmarkedNumbers = winner!!.sumOfAllUnmarkedNumbers()
             println("The sum of all unmarked numbers is $sumOfAllUnmarkedNumbers")
-            println("The last number draws is $lastDrawNumber")
+            println("The last number drawn is $lastDrawNumber")
             println("The final score is ${sumOfAllUnmarkedNumbers * lastDrawNumber}")
         }
 
         // Part 2 - Giant squid - Losing grid
         private fun step2(drawNumbers: List<Int>, bingoGrids: List<BingoGrid>) {
+
             var loser: BingoGrid? = null
             var lastDrawNumber = 0
             val winningGrids = arrayListOf<BingoGrid>()
             val remainingBingoGrids = bingoGrids.toMutableList()
+
             forLoop@ for (draw in drawNumbers) {
                 run forEachLoop@{
                     remainingBingoGrids.forEach {
@@ -57,6 +62,9 @@ class Day4 {
                             if (winningGrids.size == bingoGrids.size) {
                                 loser = it
                                 lastDrawNumber = draw
+                                println()
+                                println("We have a loser: ")
+                                it.printGrind()
                                 return@forEachLoop
                             }
                         }
@@ -65,12 +73,10 @@ class Day4 {
                 remainingBingoGrids.removeAll(winningGrids)
                 if (loser != null) break@forLoop
             }
-            println()
-            println("We have a loser: ")
-            loser!!.printGrind()
+
             val sumOfAllUnmarkedNumbers = loser!!.sumOfAllUnmarkedNumbers()
             println("The sum of all unmarked numbers is $sumOfAllUnmarkedNumbers")
-            println("The last number draws is $lastDrawNumber")
+            println("The last number drawn is $lastDrawNumber")
             println("The final score is ${sumOfAllUnmarkedNumbers * lastDrawNumber}")
         }
 
@@ -80,28 +86,28 @@ class Day4 {
                 throw Exception()
             }
 
-            // List
             val numbersDrawn = lines[0].split(",").map { it.toInt() }
             var lineIndex = 2
 
-
             val bingoGrids: ArrayList<BingoGrid> = arrayListOf()
-            var y = 0
+            var rowIndex = 0
             var rows = arrayOfNulls<Array<AbstractMap.SimpleEntry<Int, Boolean>>>(5)
 
             while (lineIndex < lines.size) {
                 val line = lines[lineIndex]
                 if (line.isNotEmpty()) {
-                    rows[y] = line.trim().split("\\s+".toRegex()).map { AbstractMap.SimpleEntry(it.toInt(), false) }
-                        .toTypedArray()
-                    y++
+                    rows[rowIndex] =
+                        line.trim().split("\\s+".toRegex()).map { AbstractMap.SimpleEntry(it.toInt(), false) }
+                            .toTypedArray()
+                    rowIndex++
                 } else {
                     bingoGrids.add(BingoGrid(rows.requireNoNulls()))
-                    y = 0
+                    rowIndex = 0
                     rows = arrayOfNulls(5)
                 }
                 lineIndex++
             }
+
             return Pair(numbersDrawn, bingoGrids)
         }
     }
