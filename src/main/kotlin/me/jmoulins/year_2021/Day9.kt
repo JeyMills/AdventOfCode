@@ -1,4 +1,4 @@
-package me.jmoulins
+package me.jmoulins.year_2021
 
 /**
  * @see https://adventofcode.com/2021/day/9
@@ -113,7 +113,7 @@ class Day9 {
         }
 
         private fun readFile(): Array<out IntArray> {
-            return this::class.java.getResourceAsStream("/day9/input.txt")?.bufferedReader()?.readLines()
+            return this::class.java.getResourceAsStream("/year_2021/day9/input.txt")?.bufferedReader()?.readLines()
                 ?.map { s -> s.chunked(1).map { it.toInt() }.toIntArray() }!!.toTypedArray()
         }
     }

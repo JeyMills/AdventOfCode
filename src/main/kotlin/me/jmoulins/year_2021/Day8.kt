@@ -1,4 +1,4 @@
-package me.jmoulins
+package me.jmoulins.year_2021
 
 class Day8 {
 
@@ -129,7 +129,7 @@ class Day8 {
         }
 
         private fun readFileUsingGetResource(): List<String> {
-            return this::class.java.getResourceAsStream("/day8/input.txt")?.bufferedReader()?.readLines() ?: emptyList()
+            return this::class.java.getResourceAsStream("/year_2021/day8/input.txt")?.bufferedReader()?.readLines() ?: emptyList()
         }
     }
 }

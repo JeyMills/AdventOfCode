@@ -1,4 +1,4 @@
-package me.jmoulins
+package me.jmoulins.year_2021
 
 import kotlin.math.abs
 
@@ -56,7 +56,7 @@ class Day7 {
         }
 
         private fun readFile(): List<Int> {
-            return this::class.java.getResourceAsStream("/day7/input.txt")?.bufferedReader()?.readLines()?.get(0)
+            return this::class.java.getResourceAsStream("/year_2021/day7/input.txt")?.bufferedReader()?.readLines()?.get(0)
                 ?.split(',')?.map { it.toInt() }.orEmpty()
         }
     }

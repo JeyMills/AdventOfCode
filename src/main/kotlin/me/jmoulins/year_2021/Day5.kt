@@ -1,4 +1,4 @@
-package me.jmoulins
+package me.jmoulins.year_2021
 
 /**
  * @see https://adventofcode.com/2021/day/5
@@ -30,7 +30,7 @@ class Day5 {
         }
 
         private fun readFile(): List<Line> {
-            return this::class.java.getResourceAsStream("/day5/input.txt")?.bufferedReader()?.readLines()
+            return this::class.java.getResourceAsStream("/year_2021/day5/input.txt")?.bufferedReader()?.readLines()
                 ?.map { it.toLine() }.orEmpty()
         }
 

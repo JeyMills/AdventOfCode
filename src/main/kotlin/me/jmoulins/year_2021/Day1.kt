@@ -1,6 +1,4 @@
-package me.jmoulins
-
-import java.io.InputStream
+package me.jmoulins.year_2021
 
 /**
  * @see https://adventofcode.com/2021/day/1
@@ -40,7 +38,7 @@ class Day1 {
         }
 
         private fun readFileUsingGetResource(): List<Int> {
-            return this::class.java.getResourceAsStream("/day1/input.txt")?.bufferedReader()?.readLines()
+            return this::class.java.getResourceAsStream("/year_2021/day1/input.txt")?.bufferedReader()?.readLines()
                 ?.map { it.toInt() } ?: emptyList()
         }
     }

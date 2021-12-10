@@ -1,4 +1,4 @@
-package me.jmoulins
+package me.jmoulins.year_2021
 
 import java.util.*
 
@@ -81,7 +81,7 @@ class Day4 {
         }
 
         private fun readFile(): Pair<List<Int>, List<BingoGrid>> {
-            val lines = this::class.java.getResourceAsStream("/day4/input.txt")?.bufferedReader()?.readLines()
+            val lines = this::class.java.getResourceAsStream("/year_2021/day4/input.txt")?.bufferedReader()?.readLines()
             if (lines == null || lines.isEmpty()) {
                 throw Exception()
             }
