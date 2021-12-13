@@ -1,0 +1,46 @@
+2021-12-13 09:26:46,685 [     62]   WARN - llij.ide.plugins.PluginManager - id redefinition ([row,col,system-id]: [2,3,"product classpath"]) 
+2021-12-13 09:26:52,149 [   5526]   WARN - l.NotificationGroupManagerImpl - Notification group CodeWithMe is already registered (group=com.intellij.notification.NotificationGroup@11f80060). Plugin descriptor: PluginDescriptor(name=Code With Me, id=com.jetbrains.codeWithMe, descriptorPath=plugin.xml, path=/opt/idea-IU-212.5457.46/plugins/cwm-plugin, version=212.5457.46, package=null) 
+2021-12-13 09:26:57,408 [  10785]   WARN - ea.apk.viewer.AnalyzeApkAction - Unable to obtain project from event 
+2021-12-13 09:26:57,979 [  11356]   WARN - ctionSystem.impl.ActionUpdater - Slow (155 ms) `com.intellij.space.actions.SpaceLoginAction#update`. Consider speeding it up and/or implementing UpdateInBackground. 
+[JetBrains Runtime] Detected slow X11, switched off alpha compositing of images. Control with -Dremote.x11.workaround={true|false|auto}.
+2021-12-13 09:27:01,676 [  15053]   WARN - ctionSystem.impl.ActionUpdater - Slow (230 ms) `com.intellij.execution.actions.RunConfigurationsComboBoxAction#update`. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-12-13 09:27:03,976 [  17353]   WARN - ctionSystem.impl.ActionUpdater - 1007 ms to expand group child TabList 
+2021-12-13 09:27:03,977 [  17354]   WARN - ctionSystem.impl.ActionUpdater - 1007 ms to expand group child TabList 
+2021-12-13 09:27:06,033 [  19410]   WARN - .AbstractProgressIndicatorBase - This progress indicator is indeterminate, this may lead to visual inconsistency. Please call setIndeterminate(false) before you start progress. class com.intellij.openapi.progress.impl.BackgroundableProcessIndicator 
+java.lang.IllegalStateException
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorBase.setFraction(AbstractProgressIndicatorBase.java:203)
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorExBase.setFraction(AbstractProgressIndicatorExBase.java:124)
+	at com.intellij.openapi.progress.util.ProgressWindow.setFraction(ProgressWindow.java:328)
+	at com.intellij.openapi.progress.util.RelayUiToDelegateIndicator.setFraction(RelayUiToDelegateIndicator.java:32)
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorBase.initStateFrom(AbstractProgressIndicatorBase.java:327)
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorExBase.initStateFrom(AbstractProgressIndicatorExBase.java:222)
+	at com.intellij.openapi.progress.util.AbstractProgressIndicatorExBase.addStateDelegate(AbstractProgressIndicatorExBase.java:162)
+	at com.intellij.indexing.shared.download.SharedIndexDownloadExecutor$submitPreProgressSync$1$context$1$showBackgroundableProgress$task$1.run(SharedIndexDownloadExecutor.kt:234)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.startTask(CoreProgressManager.java:450)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.startTask(ProgressManagerImpl.java:117)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcessWithProgressAsync$5(CoreProgressManager.java:510)
+	at com.intellij.openapi.progress.impl.ProgressRunner.lambda$submit$3(ProgressRunner.java:243)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:183)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:705)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:647)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:63)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:170)
+	at com.intellij.openapi.progress.impl.ProgressRunner.lambda$submit$4(ProgressRunner.java:243)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-12-13 09:27:07,893 [  21270]   WARN - ctionSystem.impl.ActionUpdater - 1312 ms to expand group child RunClass 
+2021-12-13 09:27:07,893 [  21270]   WARN - ctionSystem.impl.ActionUpdater - 1313 ms to expand group child RunContextGroupInner 
+2021-12-13 09:27:07,960 [  21337]   WARN - ctionSystem.impl.ActionUpdater - 1379 ms to expand group child RunContextGroup 
+2021-12-13 09:27:07,982 [  21359]   WARN - ctionSystem.impl.ActionUpdater - 1402 ms to expand group child RunContextPopupGroup 
+2021-12-13 09:27:07,983 [  21360]   WARN - ctionSystem.impl.ActionUpdater - 1403 ms to expand group child EditorPopupMenu.Run 
+2021-12-13 09:27:08,021 [  21398]   WARN - ctionSystem.impl.ActionUpdater - 1947 ms to expand group child EditorLangPopupMenu 
+2021-12-13 09:27:08,930 [  22307]   WARN - ctionSystem.impl.ActionUpdater - 2043 ms to expand group child UML.Group 
+2021-12-13 09:29:14,152 [ 147529]   WARN - ctionSystem.impl.ActionUpdater - Slow (109 ms) `com.intellij.debugger.streams.action.TraceStreamAction#update`. Consider speeding it up and/or implementing UpdateInBackground. 
+2021-12-13 09:30:35,134 [ 228511]   WARN - ution.process.OSProcessHandler - Process has been already terminated: /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:37965,suspend=y,server=n -javaagent:/opt/idea-IU-212.5457.46/plugins/java/lib/rt/debugger-agent.jar -Dfile.encoding=UTF-8 -classpath /home/jmoulins/Workspace/sandbox/kotlin/AdventOfCode/target/classes:/home/jmoulins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.6.0/kotlin-stdlib-jdk8-1.6.0.jar:/home/jmoulins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.6.0/kotlin-stdlib-1.6.0.jar:/home/jmoulins/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/jmoulins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.6.0/kotlin-stdlib-common-1.6.0.jar:/home/jmoulins/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.6.0/kotlin-stdlib-jdk7-1.6.0.jar:/opt/idea-IU-212.5457.46/lib/idea_rt.jar me.jmoulins.year_2021.Day13Kt 
+2021-12-13 10:16:04,098 [2957475]   WARN - ctionSystem.impl.ActionUpdater - Slow (129 ms) `com.intellij.xdebugger.impl.actions.MuteBreakpointAction#update`. Consider speeding it up and/or implementing UpdateInBackground. 
