@@ -59,11 +59,11 @@ fun inTarget(velX0: Int, velX1: Int, xTargetMin: Int, xTargetMax: Int, yTargetMi
     while (x <= xTargetMax && y >= yTargetMin) {
         x += velX
         y += velY
-        velX = max(0, velX - 1)
-        velY -= 1
         if (x in xTargetMin..xTargetMax && y in yTargetMin..yTargetMax ) {
             return true
         }
+        velX = max(0, velX - 1)
+        velY -= 1
     }
     return false
 }
